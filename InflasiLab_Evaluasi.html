@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffe14d">
+<title>InflasiLab Evaluasi - Ekonomi Kelas XI</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16121f;--bg:#d9d2ff;--pk:#ff4fa3;--ye:#ffe14d;--mi:#3ddc97;--sk:#59c3ff;--sh:5px 5px 0 var(--ink)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font:500 17px/1.6 'Bricolage Grotesque','Trebuchet MS',system-ui,sans-serif;background:var(--bg);color:var(--ink);padding-bottom:env(safe-area-inset-bottom)}
+.bar{position:sticky;top:0;z-index:9;background:var(--ye);border-bottom:3px solid var(--ink);padding:calc(8px + env(safe-area-inset-top)) 14px 8px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.logo{font-weight:800;font-size:20px;color:var(--ink);text-decoration:none}
+nav{display:flex;gap:6px;overflow-x:auto;order:3;width:100%;padding-bottom:2px}
+nav a{flex:none;color:var(--ink);font-weight:700;font-size:14px;text-decoration:none;border:2px solid var(--ink);border-radius:99px;padding:1px 10px;background:#fff}
+nav a:hover{background:var(--pk)}
+.xp{flex:1;min-width:140px;max-width:300px;margin-left:auto;height:24px;border:3px solid var(--ink);border-radius:99px;background:#fff;position:relative;overflow:hidden}
+.xp i{display:block;height:100%;width:0;background:var(--mi);transition:width .5s}
+.xp span{position:absolute;inset:0;display:grid;place-items:center;font-size:12px;font-weight:800}
+section{padding:56px 0;border-bottom:3px solid var(--ink)}
+.w{max-width:880px;margin:auto;padding:0 18px}
+h1{font-size:clamp(38px,8vw,72px);line-height:1;font-weight:800;letter-spacing:-.03em;margin:14px 0 16px}
+h2{font-size:clamp(28px,5vw,44px);line-height:1.05;font-weight:800;letter-spacing:-.02em;margin:12px 0 14px}
+h3{font-size:19px;font-weight:800;margin-bottom:8px;line-height:1.3}
+p{margin-bottom:12px;max-width:68ch}
+.tag{display:inline-block;background:var(--pk);border:3px solid var(--ink);border-radius:8px;padding:2px 12px;font-weight:800;transform:rotate(-3deg);box-shadow:3px 3px 0 var(--ink)}
+.card{background:#fff;color:var(--ink);border:3px solid var(--ink);border-radius:18px;box-shadow:var(--sh);padding:18px;margin:16px 0}
+.card:nth-child(even){border-radius:6px 26px 6px 26px}
+.g{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.g .card{margin:0}
+.chip{border:3px solid var(--ink);border-radius:12px;background:#fff;padding:3px 12px;font-weight:700}
+.b{font:inherit;font-weight:800;color:var(--ink);background:var(--ye);border:3px solid var(--ink);border-radius:99px;padding:6px 16px;box-shadow:3px 3px 0 var(--ink);cursor:pointer;transition:transform .08s,box-shadow .08s}
+.b:active{transform:translate(3px,3px);box-shadow:0 0 0}
+.b.ok{background:var(--mi)}.b.no{background:var(--pk)}.b.on{background:var(--sk)}.b[disabled]{opacity:.45;cursor:default}
+:focus-visible{outline:4px solid #1f6fe5;outline-offset:3px}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0;align-items:center}
+input[type=range]{width:100%;accent-color:var(--pk)}
+input[type=number]{font:inherit;font-weight:800;width:130px;padding:6px 10px;border:3px solid var(--ink);border-radius:10px}
+.q{border-top:3px dashed var(--ink);padding:12px 0}
+.q:first-child{border:0;padding-top:0}
+.fb{margin:8px 0 0;font-size:15px}
+.rc{font-family:ui-monospace,Menlo,Consolas,monospace;transform:rotate(1deg)}
+.rc ul{list-style:none;padding:0;margin:8px 0}
+.rc li,.tot{display:flex;justify-content:space-between;gap:10px;border-bottom:2px dotted var(--ink);padding:3px 0}
+.tot{font-weight:800;border:0;font-size:18px}
+.stamp{display:inline-block;color:#c4145f;border:4px solid #c4145f;border-radius:10px;padding:4px 12px;font-weight:800;transform:rotate(-4deg);margin:10px 0 0}
+.pop{animation:pop .4s}
+@keyframes pop{0%{transform:rotate(-4deg) scale(1.7);opacity:.2}100%{transform:rotate(-4deg) scale(1);opacity:1}}
+.ch{display:flex;align-items:flex-end;gap:3px;height:200px;border-bottom:3px solid var(--ink)}
+.ch button{flex:1;min-width:0;padding:0;height:var(--h);background:var(--c);border:2px solid var(--ink);border-bottom:0;border-radius:5px 5px 0 0;cursor:pointer}
+.yr{display:flex;gap:3px;font-size:10px}.yr span{flex:1;text-align:center}
+#boss{background:var(--ink);color:#fff}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+<style>
+body{padding-bottom:96px}
+.dock{position:fixed;bottom:calc(10px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);display:flex;gap:4px;background:var(--ink);padding:5px;border-radius:99px;z-index:9;max-width:96vw}
+.dock a{color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:4px 12px;border-radius:99px;white-space:nowrap}
+.dock a:hover,.dock a#dl{background:var(--pk);color:var(--ink)}
+.toast{position:fixed;top:96px;left:50%;transform:translate(-50%,-20px);opacity:0;background:var(--pk);border:3px solid var(--ink);border-radius:14px;padding:8px 16px;font-weight:800;z-index:20;transition:.3s;pointer-events:none;text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.bub{max-width:82%;padding:8px 14px;border-radius:18px 18px 18px 4px;background:#fff;border:3px solid var(--ink);margin:8px 0}
+.bub.me{margin-left:auto;background:var(--mi);border-radius:18px 18px 4px 18px}
+.bub small{display:block;font-weight:800}
+details{border:3px solid var(--ink);border-radius:12px;background:#fff;padding:10px 14px;margin:10px 0}
+summary{font-weight:800;cursor:pointer}
+.lock{opacity:.4;pointer-events:none;filter:grayscale(1)}
+.tb{width:100%;border-collapse:collapse}.tb td,.tb th{padding:4px;text-align:left}.kb{width:110px!important}
+.mb{height:12px;border:2px solid var(--ink);border-radius:9px;background:#fff;overflow:hidden}
+.mb i{display:block;height:100%;background:var(--mi)}
+.av{width:84px;height:84px;border-radius:50%;background:var(--ye);border:3px solid var(--ink);display:grid;place-items:center;font-size:30px;font-weight:800;box-shadow:3px 3px 0 var(--ink)}
+@media print{body *{visibility:hidden}#rapor,#rapor *{visibility:visible}#rapor{position:absolute;left:0;top:0;width:100%}.dock,.toast{display:none}}
+</style>
+<style>
+body{background-image:radial-gradient(#16121f26 1.5px,transparent 1.5px);background-size:22px 22px}
+h1{text-shadow:4px 4px 0 var(--pk)}
+#top{position:relative;overflow:hidden}#top .w{position:relative;z-index:1}
+.fl{position:absolute;font-size:36px;animation:fl 4s ease-in-out infinite;pointer-events:none}
+@keyframes fl{50%{transform:translateY(-14px) rotate(10deg)}}
+.mq{background:var(--ink);color:var(--ye);border-bottom:3px solid var(--ink);overflow:hidden;white-space:nowrap;font-weight:800;padding:6px 0}
+.mq div{display:inline-block;animation:mq 28s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+#sp{position:fixed;top:0;left:0;height:5px;width:0;background:linear-gradient(90deg,var(--pk),var(--ye),var(--mi),var(--sk));z-index:30}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .5s,transform .5s}
+.rv.in{opacity:1;transform:none}.rv.in.lock{opacity:.4}.rc.rv.in{transform:rotate(1deg)}
+.b:hover{transform:translate(-1px,-2px) rotate(-1.5deg);box-shadow:4px 5px 0 var(--ink)}
+.b:hover:active{transform:translate(3px,3px);box-shadow:none}
+.tag:hover{transform:rotate(3deg) scale(1.08)}
+.fx{position:fixed;z-index:40;font-weight:800;pointer-events:none;animation:fx .9s ease-out forwards;background:var(--mi);border:3px solid var(--ink);border-radius:99px;padding:2px 10px}
+@keyframes fx{to{transform:translateY(-60px);opacity:0}}
+.sh{animation:sh .35s}@keyframes sh{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+ul{padding-left:20px;margin:6px 0 10px}li{margin:4px 0}
+.tb td,.tb th{border-bottom:2px dotted var(--ink)}
+@media print{.rv{opacity:1!important;transform:none!important}}
+</style>
+<style>
+.opt{display:block;width:100%;text-align:left;margin:10px 0;border-radius:16px;padding:10px 16px}
+.nv{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.nv .b{padding:2px 0;min-width:44px;text-align:center;font-size:15px}
+.nv .b.dn{background:var(--mi)}.nv .b.cur{background:var(--ye);transform:translateY(-3px)}
+select,.in{font:inherit;font-weight:700;padding:8px 12px;border:3px solid var(--ink);border-radius:12px;background:#fff;color:var(--ink);max-width:100%}
+.in{width:200px}
+.pair{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;border-top:3px dashed var(--ink);padding:12px 0}
+.pair:first-of-type{border:0}.pair>span:first-child{flex:1 1 260px}
+.tf{display:flex;gap:8px;flex:none}
+.rt{font-size:76px;font-weight:800;line-height:1}
+@media print{#hasil,#hasil *{visibility:visible}#hasil{position:absolute;left:0;top:0;width:100%}}
+</style>
+</head>
+<body>
+<header class="bar"><a class="logo" href="#top">💸 InflasiLab Evaluasi</a>
+<div class="xp" role="progressbar" aria-label="Progres jawaban"><i id="xp"></i><span id="xpt">0/15 terjawab</span></div>
+<span class="chip" id="tm" title="Waktu pengerjaan">00:00</span>
+<nav><a href="#top">Petunjuk</a><a href="#tes">Soal</a><a href="#hasil">Hasil</a><a href="#profil">Profil</a></nav></header>
+<div class="mq" aria-hidden="true"><div>🧾 harga naik 📈 uang jajan tipis 💸 inflasi = nilai uang turun 📉 gaji tetap? waspada 👀 stop panic, mulai paham 🧠 🧾 harga naik 📈 uang jajan tipis 💸 inflasi = nilai uang turun 📉 gaji tetap? waspada 👀 stop panic, mulai paham 🧠 🧾 harga naik 📈 uang jajan tipis 💸 inflasi = nilai uang turun 📉 gaji tetap? waspada 👀 stop panic, mulai paham 🧠 </div><div>🧾 harga naik 📈 uang jajan tipis 💸 inflasi = nilai uang turun 📉 gaji tetap? waspada 👀 stop panic, mulai paham 🧠 🧾 harga naik 📈 uang jajan tipis 💸 inflasi = nilai uang turun 📉 gaji tetap? waspada 👀 stop panic, mulai paham 🧠 🧾 harga naik 📈 uang jajan tipis 💸 inflasi = nilai uang turun 📉 gaji tetap? waspada 👀 stop panic, mulai paham 🧠 </div></div>
+<section id="top"><span class="fl" style="top:8%;right:6%">💸</span><span class="fl" style="top:42%;right:16%;animation-delay:-1.5s">📉</span><span class="fl" style="top:72%;right:5%;animation-delay:-3s">🛒</span><div class="w"><span class="tag">Evaluasi materi inflasi  •  kelas XI</span>
+<h1>Saatnya evaluasi! 15 soal, santai tapi serius.</h1>
+<p>Kerjakan sendiri dan jujur ya. Perkiraan waktu sekitar 20 menit. Hasil dan pembahasan muncul setelah kamu selesai.</p>
+<div class="card" style="background:#fff3a8"><h3>Isi dulu datamu 📝</h3>
+<div class="row"><label>Nama <input class="in" id="in-nm" type="text" placeholder="Nama lengkap"></label><label>Kelas <input class="in" id="in-kl" type="text" placeholder="Contoh: XI IPS 1"></label></div>
+<div class="row"><button class="b" id="go" style="background:var(--pk)">Mulai evaluasi 🚀</button><button class="b" id="rs" style="background:#fff">Mulai ulang</button></div>
+<p class="fb" id="gmsg"></p></div>
+<div class="g"><div class="card" style="background:var(--sk)"><h3>Jenis soal</h3><ul><li>Pilihan ganda (8 soal)</li><li>Benar atau salah (2 soal)</li><li>Pilih semua yang benar (1 soal)</li><li>Menjodohkan (2 soal)</li><li>Isian angka (2 soal)</li></ul></div>
+<div class="card" style="background:var(--mi)"><h3>Penilaian</h3><p>Nilai = poin kamu ÷ poin maksimum × 100. Soal isian angka bernilai 2 poin, soal lain 1 poin. Jawaban yang benar sebagian mendapat poin sebagian. Target tuntas: 75.</p></div>
+<div class="card" style="background:var(--pk)"><h3>Aturan main</h3><p>Boleh pindah soal dan mengubah jawaban sebelum menekan Selesai. Urutan soal dan pilihan diacak. Kerjakan sendiri, pembahasan muncul setelah selesai.</p></div></div>
+</div></section>
+
+<section id="tes" hidden style="background:#e5dcff"><div class="w"><span class="tag">Soal evaluasi</span><div class="nv" id="nv"></div><div class="card" id="qc"></div>
+<div class="row"><button class="b" id="pv">⬅ Sebelumnya</button><button class="b" id="nx">Berikutnya ➡</button><button class="b" id="fin" style="background:var(--pk)">Selesai dan lihat hasil</button></div></div></section>
+
+<section id="hasil" hidden style="background:#fff3a8"></section>
+
+<section id="profil" style="background:#bfe6ff"><div class="w"><span class="tag">Profil pembuat</span><h2>Kenalan sama pembuatnya</h2>
+<div class="card" style="display:flex;gap:18px;flex-wrap:wrap;align-items:center"><div class="av">MH</div><div>
+<h3 style="font-size:24px">Marcel Hasan Pangestu</h3><p style="margin:0">Mahasiswa Pendidikan Ekonomi</p><p style="margin:0">NIM: F1031251005</p><p style="margin:0">Email: <a href="mailto:f1031251005@student.untan.ac.id">f1031251005@student.untan.ac.id</a></p></div></div>
+<p>InflasiLab dibuat sebagai tugas pengembangan media pembelajaran berbasis website dengan materi Inflasi.</p></div></section>
+
+<footer class="w" style="padding:24px 18px 40px"><p><b>Sumber materi:</b> Ekonomi untuk SMA/MA Kelas XI (Bab III Uang, Inflasi, dan Kebijakan Moneter); Buku Siswa Ekonomi untuk SMA/SMK Kelas XI (Bab 4 Teori Uang, Indeks Harga, dan Inflasi); Ekonomi SMA Kelas 11 Semester 2. Data inflasi: Bank Indonesia 2021 lewat buku siswa. Harga di struk hanya contoh ilustrasi.</p><p>Dibuat oleh Marcel, Pendidikan Ekonomi.</p></footer>
+<aside class="dock"><a href="#top">🏠 Awal</a><a href="#tes">📝 Soal</a><a href="#hasil">🏆 Hasil</a><a href="#profil">👤 Profil</a></aside><div class="toast" id="toast" role="status"></div><div id="sp"></div>
+<script>
+(function(){
+const $=s=>document.querySelector(s),KEY='inflasilab_evaluasi_v1';
+const GFORM='https://docs.google.com/forms/d/e/1FAIpQLSd8udfPPgoqcscyUuT2mxfOw6keCvoYfZmeNJ5k9kdERTWRxg/viewform?usp=pp_url&entry.50039859=__Nama__&entry.161320570=__Kelas__';
+/*DATA*/
+let st=null;
+const LV=[['NPC Ekonomi',0],['Anak Baru Ngerti',15],['Pencari Cuan',30],['Analis Receh',45],['Gubernur BI Jr.',60],['Menkeu Muda',75],['Sultan Inflasi',90]];
+const TP={k:'Konsep dan jenis inflasi',p:'Penyebab inflasi',d:'Dampak inflasi',h:'Menghitung laju inflasi',b:'Cara mengatasi inflasi'};
+const TK=['Tarikan permintaan (demand pull)','Kenaikan biaya (cost push)'];
+const Q=[
+{t:'k',ty:'mc',q:'Situasi berikut yang BELUM dapat disebut inflasi adalah...',o:['Harga beras, minyak goreng, dan tarif listrik naik bersamaan, dan bulan depan masih naik','Harga cabai naik drastis hanya di satu hari pasar','Harga banyak barang dan jasa naik setiap bulan selama beberapa bulan berturut-turut','Harga barang dan jasa pada umumnya naik secara terus-menerus'],a:1,e:'Inflasi punya tiga syarat: harga naik, bersifat umum, dan terus-menerus. Kenaikan harga satu jenis barang yang hanya sesaat belum termasuk inflasi.'},
+{t:'k',ty:'bs',q:'Tentukan benar atau salah setiap pernyataan tentang inflasi.',s:[['Inflasi dihitung minimal secara bulanan.',true],['Naiknya harga satu jenis barang saja sudah cukup disebut inflasi.',false],['Saat inflasi, nilai uang cenderung turun.',true]],e:'Inflasi dihitung minimal bulanan (kenaikan harian belum masuk hitungan), harus bersifat umum pada banyak barang dan jasa, dan membuat nilai uang turun.'},
+{t:'k',ty:'mt',q:'Pasangkan laju inflasi per tahun dengan kategorinya.',p:[['5%',0],['12%',1],['45%',2],['150%',3]],c:['Ringan','Sedang','Berat','Hiperinflasi'],e:'Ringan: di bawah 10%. Sedang: 10% sampai 30%. Berat: 30% sampai 100%. Hiperinflasi: di atas 100%.'},
+{t:'k',ty:'mc',q:'Harga barang impor naik karena negara mitra dagang mengalami inflasi. Inflasi ini disebut...',o:['Inflasi luar negeri (imported inflation)','Inflasi dalam negeri (domestic inflation)','Inflasi tarikan permintaan (demand pull inflation)','Hiperinflasi'],a:0,e:'Sumber kenaikan harganya dari luar negeri (negara asal atau mitra dagang), sehingga disebut inflasi luar negeri.'},
+{t:'p',ty:'mc',q:'Menjelang Lebaran, permintaan ayam dan sembako melonjak sehingga harga naik di banyak pasar. Penyebab inflasi ini adalah...',o:TK.concat(['Inflasi luar negeri (imported inflation)','Hiperinflasi']),a:0,e:'Permintaan yang melonjak melebihi pasokan menarik harga naik. Itulah tarikan permintaan (demand pull).'},
+{t:'p',ty:'mt',q:'Pasangkan setiap kejadian dengan jenis inflasi yang dipicunya.',p:[['Harga BBM dan tarif listrik naik',1],['Pengeluaran pemerintah naik sehingga permintaan agregat ikut naik',0],['Rupiah melemah sehingga bahan baku impor mahal',1],['Pendapatan naik dan lapangan kerja melimpah sehingga belanja meningkat',0]],c:TK,e:'BBM, tarif listrik, dan rupiah yang melemah menaikkan biaya produksi (cost push). Pengeluaran pemerintah dan pendapatan yang naik menaikkan permintaan (demand pull).'},
+{t:'p',ty:'mc',q:'Banjir menghambat distribusi sehingga harga barang naik. Alasan paling tepat mengapa ini termasuk kenaikan biaya (cost push) adalah...',o:['Distribusi yang terganggu menambah biaya dan menyulitkan pasokan barang','Masyarakat tiba-tiba membeli lebih banyak barang','Pemerintah menurunkan tarif pajak','Nilai tukar rupiah menguat'],a:0,e:'Bencana alam yang mengganggu distribusi membuat biaya naik dan pasokan terhambat, sehingga harga jual naik.'},
+{t:'d',ty:'mc',q:'Bu Melina adalah ASN bergaji tetap, sedangkan Pak Joni menyimpan hartanya dalam bentuk emas dan tanah. Saat inflasi tinggi...',o:['Bu Melina cenderung dirugikan dan Pak Joni cenderung diuntungkan','Keduanya cenderung diuntungkan','Keduanya cenderung dirugikan','Bu Melina cenderung diuntungkan dan Pak Joni cenderung dirugikan'],a:0,e:'Penghasilan tetap tidak ikut naik saat harga naik sehingga daya belinya turun, sedangkan harga barang berharga seperti emas dan tanah ikut naik.'},
+{t:'d',ty:'ms',q:'Pilih SEMUA dampak negatif inflasi yang tinggi.',o:['Daya beli orang berpenghasilan tetap menurun','Daya saing dan efisiensi perusahaan menurun','Impor meningkat sehingga neraca perdagangan dan cadangan devisa tertekan','Kesenjangan pendapatan menyempit'],a:[0,1,2],e:'Inflasi tinggi menurunkan daya beli penghasilan tetap, melemahkan daya saing dan efisiensi, serta mendorong impor. Kesenjangan pendapatan justru melebar.'},
+{t:'h',ty:'num',w:2,q:'IHK bulan lalu 120 dan IHK bulan ini 126. Berapa laju inflasi bulan ini? (isi angka dalam persen)',a:5,tol:0.01,u:'%',e:'Laju inflasi = (IHKn − IHKo) ÷ IHKo × 100% = (126 − 120) ÷ 120 × 100% = 5%.'},
+{t:'h',ty:'num',w:2,q:'Tahun dasar 2021 = 100. Jumlah harga barang di keranjang tahun 2021 Rp46.000 dan tahun 2023 Rp51.500. Berapa laju inflasi 2023? (persen, dua desimal)',a:11.96,tol:0.02,u:'%',e:'IHK 2023 = 51.500 ÷ 46.000 × 100 = 111,96. Laju inflasi = 111,96 − 100 = 11,96%.'},
+{t:'h',ty:'mc',q:'IHK naik dari 125 menjadi 150. Laju inflasi dan jenisnya adalah...',o:['20%, inflasi sedang','5%, inflasi ringan','25%, inflasi berat','20%, inflasi ringan'],a:0,e:'(150 − 125) ÷ 125 × 100% = 20%. Angka ini ada di rentang 10% sampai 30%, jadi termasuk inflasi sedang.'},
+{t:'b',ty:'mc',q:'Inflasi sedang tinggi, sehingga Bank Indonesia menerapkan kebijakan moneter kontraktif (uang ketat). Langkah yang sejalan adalah...',o:['Menaikkan suku bunga dan menjual surat berharga','Menurunkan giro wajib minimum (GWM) dan melonggarkan kredit','Membeli surat berharga dan menurunkan suku bunga','Menambah belanja pemerintah'],a:0,e:'Kontraktif bertujuan mengurangi uang beredar: suku bunga naik, jual surat berharga, GWM naik, dan kredit diperketat.'},
+{t:'b',ty:'bs',q:'Tentukan benar atau salah setiap pernyataan tentang kebijakan pengendali inflasi.',s:[['Menaikkan giro wajib minimum (GWM) membuat dana yang bisa dipinjamkan bank berkurang.',true],['Menaikkan tarif pajak dan mengurangi belanja negara termasuk kebijakan moneter.',false],['Menetapkan harga tertinggi untuk barang tertentu termasuk kebijakan sektor riil.',true]],e:'GWM naik menahan dana bank sehingga kredit menyusut. Pajak dan belanja negara adalah kebijakan fiskal. Harga tertinggi dan penambahan produksi adalah kebijakan sektor riil.'},
+{t:'b',ty:'mc',q:'Inflasi terjadi karena barang di pasar terlalu sedikit. Langkah sektor riil yang paling tepat adalah...',o:['Menambah produksi dan jumlah barang di pasar','Menaikkan tarif pajak','Menjual surat berharga','Menaikkan suku bunga'],a:0,e:'Menambah produksi memperbanyak pasokan sehingga tekanan harga berkurang. Pilihan lain adalah instrumen fiskal atau moneter.'}
+];
+const done=(q,a)=>a!==null&&(q.ty==='bs'||q.ty==='mt'?a.every(v=>v!==null):q.ty==='ms'?a.length>0:q.ty==='num'?String(a).trim()!=='':true);
+function sc(q,a){
+ if(q.ty==='mc')return a===q.a?1:0;
+ if(q.ty==='bs')return a.filter((v,i)=>v===q.s[i][1]).length/q.s.length;
+ if(q.ty==='mt')return a.filter((v,i)=>v===q.p[i][1]).length/q.p.length;
+ if(q.ty==='ms'){const hit=a.filter(i=>q.a.includes(i)).length,bad=a.length-hit;return Math.max(0,(hit-bad)/q.a.length)}
+ const v=parseFloat(String(a).replace(',','.'));return isFinite(v)&&Math.abs(v-q.a)<=q.tol+1e-9?1:0}
+function calc(){let p=0,m=0;const tp={};
+ Q.forEach((q,qi)=>{const w=q.w||1,s=sc(q,st.an[qi])*w;p+=s;m+=w;tp[q.t]=tp[q.t]||{p:0,m:0};tp[q.t].p+=s;tp[q.t].m+=w});
+ const n=Math.round(p/m*100);let l=0;LV.forEach((x,i)=>{if(n>=x[1])l=i});
+ return{p,m,n,l,g:n>=85?['A','Sangat baik']:n>=75?['B','Baik']:n>=60?['C','Cukup']:['D','Perlu ulang'],tp}}
+/*END*/
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+const fmt=n=>(Math.round(n*10)/10).toString().replace('.',',');
+const shuf=n=>{const a=[...Array(n).keys()];for(let i=n-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const len=q=>q.ty==='bs'?q.s.length:q.ty==='mt'?q.p.length:q.o?q.o.length:0;
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}};
+const load=()=>{try{return JSON.parse(localStorage.getItem(KEY))}catch(e){return null}};
+let tm,tick;
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(tm);tm=setTimeout(()=>t.classList.remove('on'),2600)}
+function fresh(nm,kl){st={nm,kl,t0:Date.now(),t1:0,cur:0,done:false,ord:shuf(Q.length),pm:Q.map(q=>shuf(len(q))),an:Q.map(q=>q.ty==='bs'?q.s.map(()=>null):q.ty==='mt'?q.p.map(()=>null):q.ty==='ms'?[]:null)};save()}
+function clock(){const s=Math.floor(((st.done?st.t1:Date.now())-st.t0)/1000);$('#tm').textContent=String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
+function upd(){const n=Q.length,d=st.ord.filter(qi=>done(Q[qi],st.an[qi])).length;
+ $('#xp').style.width=d/n*100+'%';$('#xpt').textContent=d+'/'+n+' terjawab';
+ $('#nv').innerHTML=st.ord.map((qi,i)=>'<button class="b'+(done(Q[qi],st.an[qi])?' dn':'')+(i===st.cur?' cur':'')+'" data-g="'+i+'">'+(i+1)+'</button>').join('')}
+function show(i){
+ st.cur=i;const qi=st.ord[i],q=Q[qi],pm=st.pm[qi],a=st.an[qi];
+ let h='<p class="chip" style="display:inline-block;margin-bottom:6px">Soal '+(i+1)+' dari '+Q.length+(q.w>1?'  |  bobot x'+q.w:'')+'</p><h3>'+q.q+'</h3>';
+ if(q.ty==='mc')h+=pm.map(o=>'<button class="b opt'+(a===o?' on':'')+'" data-o="'+o+'">'+q.o[o]+'</button>').join('');
+ else if(q.ty==='ms')h+='<p class="fb">Pilih semua jawaban yang benar.</p>'+pm.map(o=>'<button class="b opt'+(a.includes(o)?' on':'')+'" data-o="'+o+'">'+(a.includes(o)?'☑ ':'☐ ')+q.o[o]+'</button>').join('');
+ else if(q.ty==='bs')h+=pm.map(k=>'<div class="pair"><span>'+q.s[k][0]+'</span><span class="tf"><button class="b'+(a[k]===true?' on':'')+'" data-s="'+k+'" data-v="1">Benar</button><button class="b'+(a[k]===false?' on':'')+'" data-s="'+k+'" data-v="0">Salah</button></span></div>').join('');
+ else if(q.ty==='mt')h+=pm.map(k=>'<div class="pair"><span>'+q.p[k][0]+'</span><select data-p="'+k+'"><option value="">Pilih...</option>'+q.c.map((c,j)=>'<option value="'+j+'"'+(a[k]===j?' selected':'')+'>'+c+'</option>').join('')+'</select></div>').join('');
+ else h+='<p><input class="in" id="nin" inputmode="decimal" autocomplete="off" placeholder="Ketik angkanya" value="'+esc(a||'')+'"> <b>'+q.u+'</b></p>';
+ $('#qc').innerHTML=h;$('#pv').style.visibility=i?'visible':'hidden';$('#nx').style.visibility=i<Q.length-1?'visible':'hidden';upd()}
+function begin(){$('#tes').hidden=false;$('#hasil').hidden=true;show(Math.min(st.cur,Q.length-1));clock();clearInterval(tick);tick=setInterval(clock,1000);$('#tes').scrollIntoView({behavior:'smooth'})}
+function ansTxt(q,a,key){
+ if(q.ty==='mc')return key?q.o[q.a]:(a===null?'(kosong)':q.o[a]);
+ if(q.ty==='ms')return key?q.a.map(i=>q.o[i]).join('; '):(a.length?a.map(i=>q.o[i]).join('; '):'(kosong)');
+ if(q.ty==='bs')return q.s.map((s,i)=>'<br>• '+s[0]+' → '+(key?(s[1]?'Benar':'Salah'):(a[i]===null?'(kosong)':a[i]?'Benar':'Salah'))).join('');
+ if(q.ty==='mt')return q.p.map((p,i)=>'<br>• '+p[0]+' → '+(key?q.c[p[1]]:(a[i]===null?'(kosong)':q.c[a[i]]))).join('');
+ return key?String(q.a).replace('.',',')+' '+q.u:(String(a||'').trim()===''?'(kosong)':esc(a)+' '+q.u)}
+function waktu(){const s=Math.floor((st.t1-st.t0)/1000);return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
+function result(go){
+ const c=calc();clock();clearInterval(tick);
+ let h='<div class="w"><span class="tag">Hasil evaluasi</span><h2>'+(c.n>=75?'Tuntas! Mantap 🎉':'Belum tuntas, tapi bisa dikejar 💪')+'</h2><div class="card"><div class="row" style="align-items:flex-end"><div class="rt">'+c.n+'</div><div><h3 style="margin:0">Nilai (predikat '+c.g[0]+', '+c.g[1]+')</h3><p style="margin:0">Lv.'+(c.l+1)+' '+LV[c.l][0]+'  |  Waktu '+waktu()+'  |  Target tuntas 75</p><p style="margin:0">'+esc(st.nm)+' ('+esc(st.kl)+')</p></div></div>';
+ h+='<div class="xp" style="max-width:none;margin:12px 0"><i style="width:'+c.n+'%;background:var(--pk)"></i><span>'+fmt(c.p)+' / '+c.m+' poin</span></div>';
+ const weak=[];
+ Object.keys(TP).forEach(k=>{const t=c.tp[k],pc=t.p/t.m*100;if(pc<60)weak.push(TP[k]);h+='<div class="row" style="justify-content:space-between;margin:8px 0 2px"><span>'+TP[k]+'</span><b>'+fmt(t.p)+' / '+t.m+' poin</b></div><div class="mb"><i style="width:'+pc+'%"></i></div>'});
+ h+='<p class="fb">'+(weak.length?'Perlu diulang di InflasiLab: '+weak.join(', ')+'.':'Semua topik sudah aman, pertahankan!')+'</p>';
+ h+='<div class="row"><button class="b" id="bform" style="background:var(--mi)">Kumpulkan lewat Google Form</button><button class="b" id="bcopy">Salin laporan</button><button class="b" id="bprint" style="background:var(--sk)">Cetak atau simpan PDF</button><button class="b" id="bulang" style="background:#fff">Ulangi evaluasi</button></div>';
+ h+='<p class="fb">Tombol hijau membuka Google Form dengan Nama dan Kelas terisi, dan nilaimu otomatis tersalin. Tempel nilai di kolom Nilai, isi kendalamu, lalu tekan Kirim.</p></div>';
+ h+='<div class="card"><h3>Pembahasan per soal</h3><p class="fb">Buka tiap soal untuk melihat jawabanmu, kunci, dan penjelasannya.</p>';
+ st.ord.forEach((qi,i)=>{const q=Q[qi],a=st.an[qi],s=sc(q,a);h+='<details><summary>'+(i+1)+'. '+(s>0.999?'✅ Benar':s>0?'🟡 Sebagian':'❌ Salah')+'</summary><p><b>'+q.q+'</b></p><p>Jawabanmu: '+ansTxt(q,a,false)+'</p><p>Kunci: '+ansTxt(q,a,true)+'</p><p class="fb">'+q.e+'</p></details>'});
+ h+='</div></div>';
+ $('#hasil').innerHTML=h;$('#hasil').hidden=false;$('#tes').hidden=true;
+ if(go)$('#hasil').scrollIntoView({behavior:'smooth'})}
+function txt(){const c=calc();return['LAPORAN EVALUASI - InflasiLab','Nama: '+st.nm,'Kelas: '+st.kl,'Tanggal: '+new Date().toLocaleDateString('id-ID'),'Waktu pengerjaan: '+waktu(),'Nilai: '+c.n+' (predikat '+c.g[0]+', '+c.g[1]+')','Poin: '+fmt(c.p)+' dari '+c.m,'Rincian per topik:'].concat(Object.keys(TP).map(k=>'- '+TP[k]+': '+fmt(c.tp[k].p)+' dari '+c.tp[k].m)).join('\n')}
+function finish(){
+ const left=st.ord.filter(qi=>!done(Q[qi],st.an[qi])).length;
+ if(!confirm(left?'Masih ada '+left+' soal belum dijawab (dihitung salah). Tetap selesaikan?':'Selesaikan evaluasi sekarang? Jawaban tidak bisa diubah lagi.'))return;
+ st.done=true;st.t1=Date.now();save();$('#go').disabled=true;$('#go').textContent='Evaluasi sudah selesai';result(true)}
+$('#qc').addEventListener('click',e=>{const b=e.target.closest('button');if(!b||!st||st.done)return;const qi=st.ord[st.cur],q=Q[qi];
+ if(b.dataset.o!==undefined){const o=+b.dataset.o;if(q.ty==='mc')st.an[qi]=o;else{const s=st.an[qi],k=s.indexOf(o);k<0?s.push(o):s.splice(k,1)}}
+ else if(b.dataset.s!==undefined)st.an[qi][+b.dataset.s]=b.dataset.v==='1';
+ else return;
+ save();show(st.cur)});
+$('#qc').addEventListener('change',e=>{const t=e.target;if(!st||st.done||t.dataset.p===undefined)return;st.an[st.ord[st.cur]][+t.dataset.p]=t.value===''?null:+t.value;save();upd()});
+$('#qc').addEventListener('input',e=>{if(e.target.id==='nin'&&st&&!st.done){st.an[st.ord[st.cur]]=e.target.value;save();upd()}});
+$('#nv').addEventListener('click',e=>{const b=e.target.closest('button');if(b&&b.dataset.g!==undefined&&st&&!st.done)show(+b.dataset.g)});
+$('#pv').onclick=()=>{if(st.cur>0)show(st.cur-1)};
+$('#nx').onclick=()=>{if(st.cur<Q.length-1)show(st.cur+1)};
+$('#fin').onclick=finish;
+$('#go').onclick=()=>{const nm=$('#in-nm').value.trim(),kl=$('#in-kl').value.trim();
+ if(!nm||!kl){$('#gmsg').textContent='Isi Nama dan Kelas dulu ya.';return}
+ $('#gmsg').textContent='';if(!st)fresh(nm,kl);else{st.nm=nm;st.kl=kl;save()}begin()};
+$('#rs').onclick=()=>{if(!confirm('Mulai ulang? Semua jawaban di perangkat ini akan dihapus.'))return;try{localStorage.removeItem(KEY)}catch(e){}location.reload()};
+$('#hasil').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+ if(b.id==='bform'){const c=calc(),nl=String(c.n),v={__NAMA__:st.nm,__KELAS__:st.kl,__NILAI__:nl};
+  let u=GFORM;for(const k in v)u=u.replace(new RegExp(k,'gi'),()=>encodeURIComponent(v[k]));
+  (navigator.clipboard?navigator.clipboard.writeText(nl):Promise.reject()).then(()=>toast('Nilai '+nl+' tersalin. Tempel di kolom Nilai ✅'),()=>toast('Nilai kamu '+nl+'. Ketik di kolom Nilai ya'));
+  if(!window.open(u,'_blank'))location.href=u}
+ else if(b.id==='bcopy')(navigator.clipboard?navigator.clipboard.writeText(txt()):Promise.reject()).then(()=>toast('Laporan tersalin ✅'),()=>toast('Gagal menyalin, coba cetak saja'));
+ else if(b.id==='bprint'){document.querySelectorAll('#hasil details').forEach(d=>{d.open=true});window.print()}
+ else if(b.id==='bulang'){if(!confirm('Hasil lama dihapus dari perangkat ini dan evaluasi diulang dari awal. Lanjut?'))return;try{localStorage.removeItem(KEY)}catch(x){}location.reload()}});
+const sp=$('#sp');addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;sp.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+const sv=load();
+if(sv&&sv.ord&&sv.ord.length===Q.length&&sv.an&&sv.an.length===Q.length){st=sv;$('#in-nm').value=st.nm;$('#in-kl').value=st.kl;
+ if(st.done){$('#go').disabled=true;$('#go').textContent='Evaluasi sudah selesai';result(false)}else{$('#go').textContent='Lanjutkan evaluasi';toast('Pengerjaan sebelumnya ditemukan, tekan Lanjutkan')}}
+})();
+</script>
+</body>
+</html>
